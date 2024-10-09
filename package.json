@@ -1,0 +1,32 @@
+{
+  "name": "pryecto_rags",
+  "version": "1.0.0",
+  "description": "Proyecto Gestion de ingreso para seguridad de un lugar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "node index.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jroas/pryecto_RAGS.git"
+  },
+  "keywords": [
+    "node",
+    "espress",
+    "typerscript",
+    "swagger",
+    "nongoose"
+  ],
+  "author": "WorkTeam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jroas/pryecto_RAGS/issues"
+  },
+  "homepage": "https://github.com/Jroas/pryecto_RAGS#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1"
+  }
+}
