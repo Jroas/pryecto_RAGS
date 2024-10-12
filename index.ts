@@ -1,30 +1,19 @@
-import express , { Express,Request,Response } from "express";
 import dotenv from 'dotenv';
+import server from '@/server';
+import { logError, logSucces } from '@/utils/logger';
 
-//Config env file 
+//*Configuration the .env file 
 dotenv.config();
 
-// Create expresss app 
-const app: Express =express();
-const port: string | number=process.env.PORT ||   8000;
+const port = process.env.PORT || 8000;
 
+//*Execute SERVER
 
-//Define the forts Route of App 
-app.get ('/', (req: Request , res: Response) => {
-    //Send Hello word
-    res.send('Welcom to the jungle sdfadfasdf');
+server.listen(port, ()=>{
+    logSucces("SERVER ON: Running in https//localhost:"+port+"/api")
 });
 
-
-//Define the forts Route of App 
-app.get ('/hello', (req: Request , res: Response) => {
-    //Send Hello word
-    res.send('Welcom to the hello word ');
-});
-
-
-//Execute app ande Listen Resquest to port  
-app.listen (port, () => {
-    //Send Hello word
-    console.log("Expres Server: Runing at: http://localhost:"+port);
+//*Control SERVER ERROR 
+server.on("error", (error)=>{
+    logError("SERVER ERROR: "+error)
 });

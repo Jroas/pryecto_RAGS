@@ -8,7 +8,7 @@
     "build": "npx tsc ",
     "start": "node dist/index.js",
     "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\" ",
-    "serve:coverage":"npm run test && cd coverage/lcov-report && npx serve  "
+    "serve:coverage": "npm run test && cd coverage/lcov-report && npx serve  "
   },
   "repository": {
     "type": "git",
@@ -28,14 +28,18 @@
   },
   "homepage": "https://github.com/Jroas/pryecto_RAGS#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
+    "helmet": "^8.0.0",
     "ts-node": "^10.9.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.12.0",
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "@types/jest": "^29.5.13",
+    "@types/jquery": "^3.5.31",
     "@types/node": "^22.7.5",
     "concurrently": "^9.0.1",
     "eslint": "^9.12.0",
